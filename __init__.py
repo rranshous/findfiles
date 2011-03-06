@@ -27,7 +27,7 @@ def find_files_iter(path,extension=None,exclude=None,file_name=None):
                and (not exclude or exclude not in x):
                 yield os.path.abspath(os.path.join(dir_path,name))
 
-def find_files(path,extension=None,exclude=None):
-    r = [f for f in find_files_iter(path,extension,exclude)]
+def find_files(path,extension=None,exclude=None,file_name=None):
+    r = [f for f in find_files_iter(path,extension,exclude,file_name)]
     return r
 
