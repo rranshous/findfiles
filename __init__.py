@@ -1,7 +1,7 @@
 import os
 
 
-def find_files_iter(path,extension=None,exclude=None):
+def find_files_iter(path,extension=None,exclude=None,file_name=None):
     """ yield back file paths meeting extension/exclude criteria """
 
     # absolute paths
@@ -15,8 +15,14 @@ def find_files_iter(path,extension=None,exclude=None):
         map(dir_names.remove,bad_dirs)
 
         # see if any of the current files meet our
-        # extensio and exclude criteria
+        # extension and exclude criteria
         for name in file_names:
+            # if we specified a file name than we need to
+            # check for that match first
+            if file_name is not None:
+                if file_name != name:
+                    continue
+
             if (not extension or x.endswith(extension)) \
                and (not exclude or exclude not in x):
                 yield os.path.abspath(os.path.join(dir_path,name))
