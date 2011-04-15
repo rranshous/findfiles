@@ -23,7 +23,7 @@ def find_files_iter(path,extension=None,exclude=None,file_name=None):
                 if file_name != name:
                     continue
 
-            if (not extension or x.endswith(extension)) \
+            if (not extension or name.endswith(extension)) \
                and (not exclude or exclude not in x):
                 yield os.path.abspath(os.path.join(dir_path,name))
 
