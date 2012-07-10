@@ -9,7 +9,7 @@ setup(
     version=find_files.__version__,
     author="Robby Ranshous",
     author_email="rranshous@gmail.com",
-    description="simple dead resource finder",
+    description="simple iterator for finding files on disk",
     keywords="find",
     url="https://github.com/rranshous/findfiles",
     py_modules=["find_files"],
