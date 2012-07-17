@@ -1,5 +1,5 @@
 from setuptools import setup
-import find_files
+import findfiles
 
 requirements = [
 ]
@@ -12,7 +12,7 @@ setup(
     description="simple iterator for finding files on disk",
     keywords="find",
     url="https://github.com/rranshous/findfiles",
-    py_modules=["find_files"],
+    py_modules=["findfiles"],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Topic :: Utilities",
