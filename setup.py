@@ -6,7 +6,7 @@ requirements = [
 
 setup(
     name="findfiles",
-    version=find_files.__version__,
+    version=findfiles.__version__,
     author="Robby Ranshous",
     author_email="rranshous@gmail.com",
     description="simple iterator for finding files on disk",
