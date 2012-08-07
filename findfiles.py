@@ -1,6 +1,7 @@
 
 import os
 import glob
+import os.path
 
 version_info = (0, 0, 5)
 __version__ = '.'.join(map(str, version_info))
@@ -16,6 +17,10 @@ def find_dirs_iter(path,exclude=None):
     exclude should be a string which should not be part of
     a matching file's name
     """
+
+    # expand our source path so that home paths (~) are
+    # correctly interpreted
+    path = os.path.expanduser(path)
 
     # go through all the paths resulting from interpreting
     # the path as a glob
@@ -52,6 +57,10 @@ def find_files_iter(path,extension=None,exclude=None,file_name=None):
     exclude should be a string which should not be part of
     a matching file's name
     """
+
+    # expand our source path so that home paths (~) are
+    # correctly interpreted
+    path = os.path.expanduser(path)
 
     # go through all the paths resulting from interpreting
     # the path as a glob
